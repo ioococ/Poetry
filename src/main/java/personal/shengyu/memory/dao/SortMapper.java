@@ -1,6 +1,6 @@
 package personal.shengyu.memory.dao;
 
-import personal.shengyu.memory.entity.Sort;
+import personal.shengyu.memory.domain.Sort;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

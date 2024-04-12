@@ -1,6 +1,6 @@
 package personal.shengyu.memory.service.impl;
 
-import personal.shengyu.memory.entity.WeiYan;
+import personal.shengyu.memory.domain.WeiYan;
 import personal.shengyu.memory.dao.WeiYanMapper;
 import personal.shengyu.memory.service.WeiYanService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

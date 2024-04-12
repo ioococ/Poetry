@@ -3,9 +3,9 @@ package personal.shengyu.memory.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import personal.shengyu.memory.config.PoetryResult;
-import personal.shengyu.memory.entity.User;
-import personal.shengyu.memory.vo.BaseRequestVO;
-import personal.shengyu.memory.vo.UserVO;
+import personal.shengyu.memory.domain.User;
+import personal.shengyu.memory.domain.vo.BaseRequestVO;
+import personal.shengyu.memory.domain.vo.UserVO;
 
 import java.util.List;
 

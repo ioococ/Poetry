@@ -1,4 +1,4 @@
-package personal.shengyu.memory.vo;
+package personal.shengyu.memory.domain.vo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

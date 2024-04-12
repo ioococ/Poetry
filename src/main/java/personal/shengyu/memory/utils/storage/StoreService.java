@@ -1,6 +1,6 @@
 package personal.shengyu.memory.utils.storage;
 
-import personal.shengyu.memory.vo.FileVO;
+import personal.shengyu.memory.domain.vo.FileVO;
 
 import java.util.List;
 

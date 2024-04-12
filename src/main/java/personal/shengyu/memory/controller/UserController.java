@@ -8,7 +8,7 @@ import personal.shengyu.memory.service.UserService;
 import personal.shengyu.memory.utils.CommonConst;
 import personal.shengyu.memory.utils.PoetryCache;
 import personal.shengyu.memory.utils.PoetryUtil;
-import personal.shengyu.memory.vo.UserVO;
+import personal.shengyu.memory.domain.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,8 @@
 package personal.shengyu.memory.utils;
 
 import com.alibaba.fastjson.JSON;
-import personal.shengyu.memory.entity.User;
-import personal.shengyu.memory.entity.WebInfo;
+import personal.shengyu.memory.domain.User;
+import personal.shengyu.memory.domain.WebInfo;
 import personal.shengyu.memory.handle.PoetryRuntimeException;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;

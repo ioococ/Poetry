@@ -42,7 +42,7 @@ public class PoetryCache {
 
         //设置过期时间
         if (expire > 0) {
-            Future future = executor.schedule(() -> {
+            Future<?> future = executor.schedule(() -> {
                 map.remove(key);
             }, expire, TimeUnit.SECONDS);
             map.put(key, new Entity(data, future));

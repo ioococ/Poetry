@@ -1,6 +1,6 @@
 package personal.shengyu.memory.service;
 
-import personal.shengyu.memory.entity.HistoryInfo;
+import personal.shengyu.memory.domain.HistoryInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

@@ -3,7 +3,7 @@
 <mapper namespace="personal.shengyu.memory.dao.CommentMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="personal.shengyu.memory.entity.Comment">
+    <resultMap id="BaseResultMap" type="personal.shengyu.memory.domain.Comment">
         <id column="id" property="id"/>
         <result column="source" property="source"/>
         <result column="type" property="type"/>

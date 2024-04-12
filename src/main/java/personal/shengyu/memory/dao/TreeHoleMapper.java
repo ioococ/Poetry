@@ -1,6 +1,6 @@
 package personal.shengyu.memory.dao;
 
-import personal.shengyu.memory.entity.TreeHole;
+import personal.shengyu.memory.domain.TreeHole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 

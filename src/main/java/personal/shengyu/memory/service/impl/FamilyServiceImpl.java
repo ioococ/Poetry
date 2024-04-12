@@ -1,6 +1,6 @@
 package personal.shengyu.memory.service.impl;
 
-import personal.shengyu.memory.entity.Family;
+import personal.shengyu.memory.domain.Family;
 import personal.shengyu.memory.dao.FamilyMapper;
 import personal.shengyu.memory.service.FamilyService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

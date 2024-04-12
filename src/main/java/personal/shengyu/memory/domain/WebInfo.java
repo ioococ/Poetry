@@ -1,4 +1,4 @@
-package personal.shengyu.memory.entity;
+package personal.shengyu.memory.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

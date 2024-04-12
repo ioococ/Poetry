@@ -1,9 +1,9 @@
 package personal.shengyu.memory.utils.storage;
 
-import personal.shengyu.memory.entity.Resource;
+import personal.shengyu.memory.domain.Resource;
 import personal.shengyu.memory.service.ResourceService;
 import personal.shengyu.memory.utils.CommonConst;
-import personal.shengyu.memory.vo.FileVO;
+import personal.shengyu.memory.domain.vo.FileVO;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.qiniu.storage.BucketManager;

@@ -2,9 +2,9 @@ package personal.shengyu.memory.utils;
 
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import personal.shengyu.memory.dao.*;
-import personal.shengyu.memory.entity.*;
+import personal.shengyu.memory.domain.*;
 import personal.shengyu.memory.service.UserService;
-import personal.shengyu.memory.vo.FamilyVO;
+import personal.shengyu.memory.domain.vo.FamilyVO;
 import org.apache.commons.io.IOUtils;
 import org.lionsoul.ip2region.xdb.Searcher;
 import org.springframework.beans.BeanUtils;
@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
-import personal.shengyu.memory.dao.*;
-import personal.shengyu.memory.entity.*;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -41,6 +39,9 @@ public class CommonQuery {
 
     @Autowired
     private ArticleMapper articleMapper;
+
+    @Autowired
+    private DiaryMapper diaryMapper;
 
     @Autowired
     private FamilyMapper familyMapper;
@@ -178,6 +179,33 @@ public class CommonQuery {
                 titleIds.add(article.getId());
             } else if (StringUtil.matchString(article.getArticleContent(), searchText)) {
                 contentIds.add(article.getId());
+            }
+        }
+
+        ids.add(titleIds);
+        ids.add(contentIds);
+        return ids;
+    }
+
+    public List<List<Integer>> getDiaryIds(String searchText) {
+        List<Diary> diaries = (List<Diary>) PoetryCache.get(CommonConst.ARTICLE_LIST);
+        if (diaries == null) {
+            LambdaQueryChainWrapper<Diary> wrapper = new LambdaQueryChainWrapper<>(diaryMapper);
+            diaries = wrapper.select(Diary::getId, Diary::getTitle, Diary::getContent)
+                    .orderByDesc(Diary::getDate)
+                    .list();
+            PoetryCache.put(CommonConst.DIART_LIST, diaries);
+        }
+
+        List<List<Integer>> ids = new ArrayList<>();
+        List<Integer> titleIds = new ArrayList<>();
+        List<Integer> contentIds = new ArrayList<>();
+
+        for (Diary diary : diaries) {
+            if (StringUtil.matchString(diary.getTitle(), searchText)) {
+                titleIds.add(diary.getId());
+            } else if (StringUtil.matchString(diary.getContent(), searchText)) {
+                contentIds.add(diary.getId());
             }
         }
 

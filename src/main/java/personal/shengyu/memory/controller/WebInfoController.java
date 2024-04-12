@@ -10,14 +10,11 @@ import personal.shengyu.memory.config.LoginCheck;
 import personal.shengyu.memory.config.PoetryResult;
 import personal.shengyu.memory.config.SaveCheck;
 import personal.shengyu.memory.dao.*;
-import personal.shengyu.memory.entity.*;
-import personal.shengyu.memory.dao.*;
-import personal.shengyu.memory.entity.*;
+import personal.shengyu.memory.domain.*;
 import personal.shengyu.memory.service.WebInfoService;
 import personal.shengyu.memory.utils.*;
-import personal.shengyu.memory.utils.*;
-import personal.shengyu.memory.vo.BaseRequestVO;
-import personal.shengyu.memory.vo.ResourcePathVO;
+import personal.shengyu.memory.domain.vo.BaseRequestVO;
+import personal.shengyu.memory.domain.vo.ResourcePathVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -215,7 +212,7 @@ public class WebInfoController {
         if (!StringUtils.hasText(resourcePathVO.getTitle()) || !StringUtils.hasText(resourcePathVO.getType())) {
             return PoetryResult.fail("标题和资源类型不能为空！");
         }
-        if (CommonConst.RESOURCE_PATH_TYPE_LOVE_PHOTO.equals(resourcePathVO.getType())) {
+        if (CommonConst.RESOURCE_PATH_TYPE_ALBUMS.equals(resourcePathVO.getType())) {
             resourcePathVO.setRemark(PoetryUtil.getAdminUser().getId().toString());
         }
         ResourcePath resourcePath = new ResourcePath();
@@ -293,7 +290,7 @@ public class WebInfoController {
         if (resourcePathVO.getId() == null) {
             return PoetryResult.fail("Id不能为空！");
         }
-        if (CommonConst.RESOURCE_PATH_TYPE_LOVE_PHOTO.equals(resourcePathVO.getType())) {
+        if (CommonConst.RESOURCE_PATH_TYPE_ALBUMS.equals(resourcePathVO.getType())) {
             resourcePathVO.setRemark(PoetryUtil.getAdminUser().getId().toString());
         }
         ResourcePath resourcePath = new ResourcePath();
@@ -402,13 +399,13 @@ public class WebInfoController {
     /**
      * 查询爱情
      */
-    @GetMapping("/listAdminLovePhoto")
-    public PoetryResult<List<Map<String, Object>>> listAdminLovePhoto() {
+    @GetMapping("/listAlbums")
+    public PoetryResult<List<Map<String, Object>>> listAlbums() {
         QueryWrapper<ResourcePath> queryWrapper = new QueryWrapper<>();
         queryWrapper.select("classify, count(*) as count")
                 .eq("status", Boolean.TRUE)
                 .eq("remark", PoetryUtil.getAdminUser().getId().toString())
-                .eq("type", CommonConst.RESOURCE_PATH_TYPE_LOVE_PHOTO)
+                .eq("type", CommonConst.RESOURCE_PATH_TYPE_ALBUMS)
                 .groupBy("classify");
         List<Map<String, Object>> maps = resourcePathMapper.selectMaps(queryWrapper);
         return PoetryResult.success(maps);
@@ -419,20 +416,20 @@ public class WebInfoController {
      */
     @LoginCheck
     @SaveCheck
-    @PostMapping("/saveLovePhoto")
-    public PoetryResult saveLovePhoto(@RequestBody ResourcePathVO resourcePathVO) {
+    @PostMapping("/saveAlbums")
+    public PoetryResult saveAlbums(@RequestBody ResourcePathVO resourcePathVO) {
         if (!StringUtils.hasText(resourcePathVO.getClassify()) || !StringUtils.hasText(resourcePathVO.getCover()) ||
                 !StringUtils.hasText(resourcePathVO.getTitle())) {
             return PoetryResult.fail("信息不全！");
         }
-        ResourcePath lovePhoto = new ResourcePath();
-        lovePhoto.setClassify(resourcePathVO.getClassify());
-        lovePhoto.setTitle(resourcePathVO.getTitle());
-        lovePhoto.setCover(resourcePathVO.getCover());
-        lovePhoto.setRemark(PoetryUtil.getUserId().toString());
-        lovePhoto.setType(CommonConst.RESOURCE_PATH_TYPE_LOVE_PHOTO);
-        lovePhoto.setStatus(Boolean.FALSE);
-        resourcePathMapper.insert(lovePhoto);
+        ResourcePath albums = new ResourcePath();
+        albums.setClassify(resourcePathVO.getClassify());
+        albums.setTitle(resourcePathVO.getTitle());
+        albums.setCover(resourcePathVO.getCover());
+        albums.setRemark(PoetryUtil.getUserId().toString());
+        albums.setType(CommonConst.RESOURCE_PATH_TYPE_ALBUMS);
+        albums.setStatus(Boolean.FALSE);
+        resourcePathMapper.insert(albums);
         return PoetryResult.success();
     }
 

@@ -1,11 +1,13 @@
 package personal.shengyu.memory.config;
 
+import lombok.AllArgsConstructor;
 import personal.shengyu.memory.utils.CodeMsg;
 import lombok.Data;
 
 import java.io.Serializable;
 
 @Data
+@AllArgsConstructor
 public class PoetryResult<T> implements Serializable {
 
     private static final long serialVersionUI = 1L;
@@ -22,6 +24,11 @@ public class PoetryResult<T> implements Serializable {
     public PoetryResult(int code, String message) {
         this.code = code;
         this.message = message;
+    }
+
+    public PoetryResult(String message, T data) {
+        this.message = message;
+        this.data = data;
     }
 
     public PoetryResult(T data) {
@@ -47,6 +54,7 @@ public class PoetryResult<T> implements Serializable {
     }
 
     public static <T> PoetryResult<T> success(T data) {
+//        return new PoetryResult("success", data);
         return new PoetryResult(data);
     }
 

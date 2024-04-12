@@ -1,6 +1,6 @@
 package personal.shengyu.memory.dao;
 
-import personal.shengyu.memory.entity.WebInfo;
+import personal.shengyu.memory.domain.WebInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

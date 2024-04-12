@@ -3,7 +3,7 @@
 <mapper namespace="personal.shengyu.memory.dao.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="personal.shengyu.memory.entity.User">
+    <resultMap id="BaseResultMap" type="personal.shengyu.memory.domain.User">
         <id column="id" property="id"/>
         <result column="username" property="username"/>
         <result column="password" property="password"/>

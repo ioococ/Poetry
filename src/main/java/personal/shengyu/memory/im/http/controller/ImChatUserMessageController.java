@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapp
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import personal.shengyu.memory.config.LoginCheck;
 import personal.shengyu.memory.config.PoetryResult;
-import personal.shengyu.memory.entity.User;
+import personal.shengyu.memory.domain.User;
 import personal.shengyu.memory.im.http.entity.ImChatUserMessage;
 import personal.shengyu.memory.im.http.service.ImChatUserMessageService;
 import personal.shengyu.memory.im.http.vo.UserMessageVO;

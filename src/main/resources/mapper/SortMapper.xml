@@ -3,7 +3,7 @@
 <mapper namespace="personal.shengyu.memory.dao.SortMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="personal.shengyu.memory.entity.Sort">
+    <resultMap id="BaseResultMap" type="personal.shengyu.memory.domain.Sort">
         <id column="id" property="id"/>
         <result column="sort_name" property="sortName"/>
         <result column="sort_description" property="sortDescription"/>

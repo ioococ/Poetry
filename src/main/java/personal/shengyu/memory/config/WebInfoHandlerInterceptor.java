@@ -1,7 +1,7 @@
 package personal.shengyu.memory.config;
 
 import com.alibaba.fastjson.JSON;
-import personal.shengyu.memory.entity.WebInfo;
+import personal.shengyu.memory.domain.WebInfo;
 import personal.shengyu.memory.utils.CodeMsg;
 import personal.shengyu.memory.utils.CommonConst;
 import personal.shengyu.memory.utils.PoetryCache;

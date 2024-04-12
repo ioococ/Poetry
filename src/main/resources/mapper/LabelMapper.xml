@@ -3,7 +3,7 @@
 <mapper namespace="personal.shengyu.memory.dao.LabelMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="personal.shengyu.memory.entity.Label">
+    <resultMap id="BaseResultMap" type="personal.shengyu.memory.domain.Label">
         <id column="id" property="id"/>
         <result column="sort_id" property="sortId"/>
         <result column="label_name" property="labelName"/>

@@ -1,4 +1,4 @@
-package personal.shengyu.memory.vo;
+package personal.shengyu.memory.domain.vo;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

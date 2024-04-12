@@ -2,7 +2,7 @@ package personal.shengyu.memory.im.websocket;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
-import personal.shengyu.memory.entity.User;
+import personal.shengyu.memory.domain.User;
 import personal.shengyu.memory.im.http.entity.ImChatGroupUser;
 import personal.shengyu.memory.im.http.entity.ImChatUserGroupMessage;
 import personal.shengyu.memory.im.http.entity.ImChatUserMessage;

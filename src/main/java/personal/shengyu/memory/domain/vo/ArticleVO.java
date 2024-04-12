@@ -1,8 +1,8 @@
-package personal.shengyu.memory.vo;
+package personal.shengyu.memory.domain.vo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import personal.shengyu.memory.entity.Label;
-import personal.shengyu.memory.entity.Sort;
+import personal.shengyu.memory.domain.Label;
+import personal.shengyu.memory.domain.Sort;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 

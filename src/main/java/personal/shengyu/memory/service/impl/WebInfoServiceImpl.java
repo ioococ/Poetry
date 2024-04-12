@@ -1,6 +1,6 @@
 package personal.shengyu.memory.service.impl;
 
-import personal.shengyu.memory.entity.WebInfo;
+import personal.shengyu.memory.domain.WebInfo;
 import personal.shengyu.memory.dao.WebInfoMapper;
 import personal.shengyu.memory.service.WebInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

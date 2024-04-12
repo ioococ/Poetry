@@ -4,7 +4,7 @@ package personal.shengyu.memory.im.http.controller;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import personal.shengyu.memory.config.LoginCheck;
 import personal.shengyu.memory.config.PoetryResult;
-import personal.shengyu.memory.entity.User;
+import personal.shengyu.memory.domain.User;
 import personal.shengyu.memory.im.http.entity.ImChatUserFriend;
 import personal.shengyu.memory.im.http.service.ImChatUserFriendService;
 import personal.shengyu.memory.im.http.vo.UserFriendVO;

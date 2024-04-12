@@ -3,7 +3,7 @@
 <mapper namespace="personal.shengyu.memory.dao.FamilyMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="personal.shengyu.memory.entity.Family">
+    <resultMap id="BaseResultMap" type="personal.shengyu.memory.domain.Family">
         <id column="id" property="id"/>
         <result column="user_id" property="userId"/>
         <result column="bg_cover" property="bgCover"/>

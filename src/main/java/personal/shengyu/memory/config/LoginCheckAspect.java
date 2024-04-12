@@ -1,6 +1,6 @@
 package personal.shengyu.memory.config;
 
-import personal.shengyu.memory.entity.User;
+import personal.shengyu.memory.domain.User;
 import personal.shengyu.memory.handle.PoetryLoginException;
 import personal.shengyu.memory.handle.PoetryRuntimeException;
 import personal.shengyu.memory.utils.*;
@@ -11,7 +11,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import personal.shengyu.memory.utils.*;
 
 
 @Aspect

@@ -1,4 +1,4 @@
-package personal.shengyu.memory.vo;
+package personal.shengyu.memory.domain.vo;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.Data;
@@ -38,4 +38,12 @@ public class BaseRequestVO extends Page {
     private Boolean status;
 
     private String classify;
+
+    private String diarySearch;
+
+    private String weather;
+
+    private String temperature;
+
+    private String category;
 }

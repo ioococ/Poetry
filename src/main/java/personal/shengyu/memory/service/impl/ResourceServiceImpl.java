@@ -1,6 +1,6 @@
 package personal.shengyu.memory.service.impl;
 
-import personal.shengyu.memory.entity.Resource;
+import personal.shengyu.memory.domain.Resource;
 import personal.shengyu.memory.dao.ResourceMapper;
 import personal.shengyu.memory.service.ResourceService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

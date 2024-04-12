@@ -1,12 +1,12 @@
 package personal.shengyu.memory.utils;
 
-import personal.shengyu.memory.entity.Article;
-import personal.shengyu.memory.entity.Comment;
-import personal.shengyu.memory.entity.User;
-import personal.shengyu.memory.entity.WebInfo;
+import personal.shengyu.memory.domain.Article;
+import personal.shengyu.memory.domain.Comment;
+import personal.shengyu.memory.domain.User;
+import personal.shengyu.memory.domain.WebInfo;
 import personal.shengyu.memory.im.http.entity.ImChatUserMessage;
 import personal.shengyu.memory.service.CommentService;
-import personal.shengyu.memory.vo.CommentVO;
+import personal.shengyu.memory.domain.vo.CommentVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;

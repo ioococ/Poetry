@@ -149,6 +149,11 @@ public class CommonConst {
     public static final String ARTICLE_LIST = "article_list";
 
     /**
+     * 文章缓存，用于搜索
+     */
+    public static final String DIART_LIST = "diary_list";
+
+    /**
      * 文章缓存，用于首页
      */
     public static final String SORT_ARTICLE_LIST = "sort_article_list";
@@ -229,7 +234,7 @@ public class CommonConst {
     public static final String RESOURCE_PATH_TYPE_FRIEND = "friendUrl";
     public static final String RESOURCE_PATH_TYPE_FUNNY = "funny";
     public static final String RESOURCE_PATH_TYPE_FAVORITES = "favorites";
-    public static final String RESOURCE_PATH_TYPE_LOVE_PHOTO = "lovePhoto";
+    public static final String RESOURCE_PATH_TYPE_ALBUMS = "albums";
 
     /**
      * 微言

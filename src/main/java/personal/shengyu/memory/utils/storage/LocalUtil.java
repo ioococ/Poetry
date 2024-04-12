@@ -1,11 +1,11 @@
 package personal.shengyu.memory.utils.storage;
 
 import cn.hutool.core.io.FileUtil;
-import personal.shengyu.memory.entity.Resource;
+import personal.shengyu.memory.domain.Resource;
 import personal.shengyu.memory.handle.PoetryRuntimeException;
 import personal.shengyu.memory.service.ResourceService;
 import personal.shengyu.memory.utils.StringUtil;
-import personal.shengyu.memory.vo.FileVO;
+import personal.shengyu.memory.domain.vo.FileVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

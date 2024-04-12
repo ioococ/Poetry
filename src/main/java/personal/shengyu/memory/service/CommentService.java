@@ -2,10 +2,10 @@ package personal.shengyu.memory.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import personal.shengyu.memory.config.PoetryResult;
-import personal.shengyu.memory.entity.Comment;
+import personal.shengyu.memory.domain.Comment;
 import com.baomidou.mybatisplus.extension.service.IService;
-import personal.shengyu.memory.vo.BaseRequestVO;
-import personal.shengyu.memory.vo.CommentVO;
+import personal.shengyu.memory.domain.vo.BaseRequestVO;
+import personal.shengyu.memory.domain.vo.CommentVO;
 
 
 /**

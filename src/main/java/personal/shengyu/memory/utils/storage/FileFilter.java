@@ -1,6 +1,6 @@
 package personal.shengyu.memory.utils.storage;
 
-import personal.shengyu.memory.entity.User;
+import personal.shengyu.memory.domain.User;
 import personal.shengyu.memory.utils.CommonConst;
 import personal.shengyu.memory.utils.PoetryCache;
 import personal.shengyu.memory.utils.PoetryUtil;

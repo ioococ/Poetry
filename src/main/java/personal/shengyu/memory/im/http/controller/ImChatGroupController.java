@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.conditions.update.LambdaUpdateChainWra
 import personal.shengyu.memory.config.LoginCheck;
 import personal.shengyu.memory.config.PoetryResult;
 import personal.shengyu.memory.config.SaveCheck;
-import personal.shengyu.memory.entity.User;
+import personal.shengyu.memory.domain.User;
 import personal.shengyu.memory.im.http.entity.ImChatGroup;
 import personal.shengyu.memory.im.http.entity.ImChatGroupUser;
 import personal.shengyu.memory.im.http.entity.ImChatUserGroupMessage;
@@ -19,7 +19,7 @@ import personal.shengyu.memory.im.websocket.TioWebsocketStarter;
 import personal.shengyu.memory.utils.CodeMsg;
 import personal.shengyu.memory.utils.PoetryEnum;
 import personal.shengyu.memory.utils.PoetryUtil;
-import personal.shengyu.memory.vo.BaseRequestVO;
+import personal.shengyu.memory.domain.vo.BaseRequestVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
